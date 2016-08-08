@@ -23,4 +23,4 @@ RUN chmod a+x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
 
-#CMD ["bash"]
+CMD ["bash"]

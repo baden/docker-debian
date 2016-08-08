@@ -11,11 +11,10 @@ if [ $USER_ID ]; then
     mkdir -p /home/composer
     chown $USER_ID:$GROUP_ID /home/composer
 
-    exec runuser -u composer "$@"
+    exec runuser -u composer -- "$@"
 
 else
 
     exec $@
 
 fi
-
