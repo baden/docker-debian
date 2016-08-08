@@ -18,4 +18,9 @@ ENV LC_ALL ru_UA.UTF-8
 
 EXPOSE 8000
 
-CMD ["bash"]
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod a+x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
+
+#CMD ["bash"]
